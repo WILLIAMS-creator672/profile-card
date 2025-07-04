@@ -34,3 +34,17 @@ cancelButton.addEventListener('click', () => {
 saveButton.addEventListener('click', () => {
     saveBio()
 })
+
+const fileInput = document.getElementById('file-upload');
+const profileImg = document.querySelector('.dp');
+
+fileInput.addEventListener('change', function () {
+    const file = this.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            profileImg.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+    }
+});

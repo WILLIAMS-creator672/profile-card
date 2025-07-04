@@ -21,8 +21,17 @@
 
 
     <div class="card">
-        <img src="bio-dpp.png" alt="" class="dp">
-        
+      <div class="dp-card" >
+          <img src="no-dp.jpeg" alt="" class="dp">
+      </div>
+
+        <!-- <input type="file"> -->
+
+        <label for="file-upload" class="dp-upload">
+            <i class="fa-solid fa-camera"></i> Upload Photo
+        </label>
+        <input id="file-upload" type="file" />
+
         <div class="name">
             <h1>Profile Name</h1>
         </div>
@@ -35,14 +44,14 @@
                 <h5 id="bio-text">This is my bio</h5>
             </div> <br>
 
-             <button id="edit-button"><i class="fa-solid fa-pen"></i></button>
+            <button id="edit-button"><i class="fa-solid fa-pen"></i></button>
         </div>
     </div>
 
 
 
     <div class="edit-modal" id="edit-modal">
-        
+
         <p style="text-align: center;">Edit Bio</p>
 
         <textarea name="" id="edit-input" placeholder="Write about yourself..."></textarea>
