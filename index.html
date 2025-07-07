@@ -19,33 +19,63 @@
 <body>
 
 
+    <!-- CREATE PROFILE -->
+    <form action="" id="form">
+        <h2 style="text-align: center;">Create Your Profile!</h2>
+        <div>
+            <input type="text" placeholder="Your First Name" id="first-name"><br>
+            <p id="fname-error"></p>
+        </div><br>
 
-    <div class="card">
-      <div class="dp-card" >
-          <img src="no-dp.jpeg" alt="" class="dp">
-      </div>
-
-        <!-- <input type="file"> -->
-
-        <label for="file-upload" class="dp-upload">
-            <i class="fa-solid fa-camera"></i> Upload Photo
-        </label>
-        <input id="file-upload" type="file" />
-
-        <div class="name">
-            <h1>Profile Name</h1>
+        <div>
+            <input type="text" placeholder="Your Last Name" id="last-name"><br>
+            <p id="lname-error"></p>
+        </div><br>
+        <div>
+            <label for="work" style="font-size: 10px;">Occupation</label><br>
+            <input type="text" name="work" id="occupation"><br>
+            <p id="work-error"></p>
         </div>
-        <div class="about">
-            <p>Works at ICT</p>
-        </div>
-        <div class="bio-main">
-            <div style="font-size: 18px;">- Bio -</div>
-            <div class="bio-div">
-                <h5 id="bio-text">This is my bio</h5>
+
+        <button type="button" id="submit" onclick="registerAccount(event)">Create Profile</button>
+    </form>
+
+
+
+    <div class="card" id="card">
+
+        <button class="logout" id="log-out">Log Out</button>
+
+
+        <div class="content">
+            <div class="dp-card" id="dp-card">
+                <img src="no-dp.jpeg" alt="" class="dp">
             </div> <br>
 
-            <button id="edit-button"><i class="fa-solid fa-pen"></i></button>
+            <label for="file-upload" class="dp-upload">
+                <i class="fa-solid fa-camera"></i> Upload Photo
+            </label>
+            <input id="file-upload" type="file" />
+
+            <div class="name">
+                <h1 id="profile-name"></h1>
+            </div> <br>
+
+            <div class="about">
+                <p id="occupation-text"></p>
+            </div> <br>
+
+            <div class="bio-main">
+                <div style="font-size: 18p">- Bio -</div>
+                <div class="bio-div">
+                    <h5 id="bio-text">This is my bio</h5>
+                </div> <br>
+
+                <button id="edit-button"><i class="fa-solid fa-pen"></i></button>
+            </div>
         </div>
+
+
     </div>
 
 
@@ -59,6 +89,15 @@
         <div>
             <button id="cancel-button">Cancel</button>
             <button id="save-button">Save</button>
+        </div>
+
+    </div>
+
+    <div id="logout-modal">
+        <p>Are you sure you want to log out?</p>
+        <div>
+            <button id="logout-yes">Yes</button>
+            <button id="logout-no">No</button>
         </div>
     </div>
 
